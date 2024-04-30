@@ -12,4 +12,9 @@ public class DivisibleEntre3_Test {
     void testEsDivisible(){
         assertEquals(true, DivisibleEntre3.division(2, true));
     }
+
+    @Test
+    void testEsDivisible2(){
+        assertEquals(true, DivisibleEntre3.division(6, true));
+    }
 }
