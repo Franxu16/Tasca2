@@ -1,19 +1,18 @@
 /* Nombre: Fran Vidal Chiclana */
 
 public class DivisibleEntre3 {
-    public static boolean division(int n, boolean salida) {
+    public static boolean division(int n) {
         StringBuilder numeroConcatenado = new StringBuilder();
 
-        for (int i = 1; i <= n; i++) { /* Concatena los numeros en uno y almacena el resultado en el StringBuilder */
+        for (int i = 1; i <= n; i++) { /* Bucle que concatena los numeros en uno entero */
             numeroConcatenado.append(i);
         }
 
         int sumDigits = 0;
-        /* Almacena el valor numerico de los numeros que componen el numero concatenado */
+        /* Consigue los valores de cada numero del gran numero concatenado */
         for (int i = 0; i < numeroConcatenado.length(); i++) {
             sumDigits += Character.getNumericValue(numeroConcatenado.charAt(i));
         }
-        boolean esDivisiblePor3 = sumDigits % 3 == 0;
-        return esDivisiblePor3 == salida;
+        return sumDigits % 3 == 0;
     }
 }
